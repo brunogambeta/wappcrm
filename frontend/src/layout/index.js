@@ -391,7 +391,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
         open={drawerOpen}
       >
         <div className={classes.toolbarIcon}>
-          {/* <img src={logo} className={classes.logo} alt="logo" /> */}
+          { <img src={logo} className={classes.logo} alt="logo" /> }
           <IconButton className={classes.iconDrawer} onClick={() => setDrawerOpen(!drawerOpen)}>
             <ChevronLeftIcon />
           </IconButton>
@@ -435,33 +435,33 @@ const LoggedInLayout = ({ children, themeToggle }) => {
             noWrap
             className={classes.title}
           >
-            <img style={{}} src={logo} className={classes.logo} alt="logo" />
+            {/* <img style={{}} src={logo} className={classes.logo} alt="logo" /> */}
           </Typography>
 
 
-          {/* <Typography variant="caption" style={{ color: "white", marginRight: 15, fontWeight: "bold" }}>Sua assinatura: {companyDueDate}</Typography> */}
+          {/* { <Typography variant="caption" style={{ color: "white", marginRight: 15, fontWeight: "bold" }}>Sua assinatura: {companyDueDate}</Typography>} */}
 
           <Tooltip arrow title={<Typography variant="caption" style={{ color: "white", marginRight: 15, fontWeight: "bold" }}>Sua assinatura: {companyDueDate}</Typography>}>
             <EventAvailableIcon style={{ color: "white", marginRight: 15, }} />
           </Tooltip>
 
 
-          {/* <IconButton edge="start" onClick={toggleColorMode}>
+          { <IconButton edge="start" onClick={toggleColorMode}>
             {theme.mode === 'dark' ? <Brightness7Icon style={{ color: "white" }} /> : <Brightness4Icon style={{ color: "white" }} />}
-          </IconButton> */}
+          </IconButton> }
 
-          {/* <NotificationsVolume
+          { <NotificationsVolume
             setVolume={setVolume}
             volume={volume}
-          /> */}
+          /> }
 
-          {/* <IconButton
+          { <IconButton
             onClick={handleRefreshPage}
             aria-label={i18n.t("mainDrawer.appBar.refresh")}
             color="inherit"
           >
             <CachedIcon style={{ color: "white" }} />
-          </IconButton> */}
+          </IconButton> }
 
           {user.id && <NotificationsPopOver volume={volume} />}
 
@@ -517,7 +517,6 @@ const LoggedInLayout = ({ children, themeToggle }) => {
           </div> */}
 
           <div>
-
             <IconButton
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -545,7 +544,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
               onClose={handleCloseProfileMenu}
             >
               <MenuItem onClick={handleOpenUserModal}>{i18n.t("mainDrawer.appBar.user.profile")} </MenuItem>
-              <MenuItem onClick={toggleColorMode}> {theme.mode === 'dark' ? i18n.t("mainDrawer.appBar.styleLight") : i18n.t("mainDrawer.appBar.styleDark")}  </MenuItem>
+              {/* <MenuItem onClick={toggleColorMode}> {theme.mode === 'dark' ? i18n.t("mainDrawer.appBar.styleLight") : i18n.t("mainDrawer.appBar.styleDark")}  </MenuItem> */}
               <NestedMenuItem
                 label={i18n.t("mainDrawer.appBar.user.language")}
                 parentMenuOpen={menuOpen}
