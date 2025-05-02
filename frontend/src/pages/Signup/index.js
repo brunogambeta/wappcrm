@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     "&.MuiButton-root": {
       margin: "20px 0px 16px",
-      backgroundColor: "rgb(52, 137, 255)",
+      backgroundColor: "#008080",
       borderRadius: " 30px",
     },
 
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: "none",
     },
 
-    backgroundColor: "rgb(52, 137, 255)",
+    backgroundColor: "#008080",
     margin: theme.spacing(3, 0, 2),
     WebkitTextFillColor: "#FFF",
   },
@@ -271,12 +271,12 @@ const SignUp = () => {
           </Formik>
         </div>
         <div className="footer">
-          <p className="p">
+        <p>
             Copyright ©{" "}
-            <a href={"#"} target={"_blank"}>
-              Canal_Leandro_Reis{""}
+            <a href={"https://totalsig.com.br"} target={"_blank"}>
+              Sig Sistemas{""}
             </a>{" "}
-            2024{" "}
+            2025{" "}
           </p>
           <p className="p">
             This site is protected by reCAPTCHA Enterprise and the Google{" "}

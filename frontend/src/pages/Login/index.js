@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "100vw",
     height: "100vh",
-    background: "linear-gradient(to right, #0000FF , #0000CD , #00008B)",
+    background: "linear-gradient(to right, #008080 , #008080 , #008080)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% 100%",
     backgroundPosition: "center",
@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     "&.MuiButton-root": {
       margin: "20px 0px 16px",
-      backgroundColor: "rgb(52, 137, 255)",
+      backgroundColor: "#008080",
       borderRadius: " 30px",
     },
     "&:hover": {
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
       // boxShadow: "none",
     },
 
-    backgroundColor: "rgb(52, 137, 255)",
+    backgroundColor: "#008080",
     margin: theme.spacing(3, 0, 2),
     WebkitTextFillColor: "#FFF",
     width: "50%",
@@ -113,10 +113,10 @@ const Login = () => {
         <div className="container-footer">
           <p>
             Copyright ©{" "}
-            <a href={"#"} target={"_blank"}>
-              Leandro_Reis{""}
+            <a href={"https://totalsig.com.br"} target={"_blank"}>
+              Sig Sistemas{""}
             </a>{" "}
-            2024{" "}
+            2025{" "}
           </p>
           <p>
             This site is protected by reCAPTCHA Enterprise and the Google{" "}

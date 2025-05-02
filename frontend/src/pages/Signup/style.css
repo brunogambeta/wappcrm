@@ -42,9 +42,9 @@ body {
   /* max-height: 100vh; */
 }
 .h4 {
-  caret-color: rgb(52, 137, 255);
-  color: rgb(52, 137, 255);
-  column-rule-color: rgb(52, 137, 255);
+  caret-color: #008080;
+  color: #008080;
+  column-rule-color: #008080;
   font-size: 34px;
   line-height: 41.99px;
   margin: 10px 0 25px;
@@ -63,7 +63,7 @@ body {
 }
 
 .img-signup {
-  background-image: url(../../assets/backgroundStep.png);
+  background-image: url(../../assets/bg-login.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
