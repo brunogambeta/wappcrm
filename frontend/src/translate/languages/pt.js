@@ -424,7 +424,7 @@ const messages = {
           yes: "SIM",
           no: "NÃO",
           open: "Abertos",
-          resolverd: "Resolvidos",
+          resolverd: "Finalizados",
         },
         toasts: {
           deleted: "O atendimento que você estava foi deletado.",
@@ -435,7 +435,7 @@ const messages = {
         tabs: {
           open: { title: "Abertas" },
           group: { title: "Grupos" },
-          closed: { title: "Resolvidos" },
+          closed: { title: "Finalizados" },
           search: { title: "Busca" },
         },
         search: {

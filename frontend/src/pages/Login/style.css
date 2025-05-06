@@ -43,7 +43,7 @@ body {
   text-align: center;
   margin-bottom: 10px;
 }
-.container-footer a {
+.container-footer a, p {
   color: black;
   cursor: pointer;
 }
@@ -57,7 +57,7 @@ body {
   justify-content: flex-end;
   margin-right: 5px;
   margin-top: 5px;
-  color: #285ec9;
+  color: #008080;
 }
 .link-recovery {
   text-decoration-color: #008080;
@@ -122,7 +122,7 @@ body {
   font-weight: 500;
   justify-content: center;
   line-height: 24.5px;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0.87);
+  -webkit-text-fill-color: rgba(7, 7, 7, 0.87);
   width: 100%;
 }
 .link-enter {

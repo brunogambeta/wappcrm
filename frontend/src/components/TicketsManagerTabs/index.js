@@ -42,6 +42,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   tabsHeader: {
+    
     flex: "none",
     backgroundColor: theme.palette.tabHeaderBackground,
   },
@@ -323,6 +324,7 @@ const TicketsManagerTabs = () => {
           <Tab
             value={"open"}
             icon={<MoveToInboxIcon />}
+            
             label={i18n.t("tickets.tabs.open.title")}
             classes={{ root: classes.tab }}
           />

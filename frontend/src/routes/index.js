@@ -18,7 +18,7 @@ import MessagesAPI from "../pages/MessagesAPI/";
 import Helps from "../pages/Helps/";
 import ContactLists from "../pages/ContactLists/";
 import ContactListItems from "../pages/ContactListItems/";
-// import Companies from "../pages/Companies/";
+import Companies from "../pages/Companies/";
 import QuickMessages from "../pages/QuickMessages/";
 import Kanban from "../pages/Kanban";
 import { AuthProvider } from "../context/Auth/AuthContext";
@@ -59,7 +59,7 @@ const Routes = () => {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/recovery-password" component={PasswordReset} />
-              {/* <Route exact path="/create-company" component={Companies} /> */}
+              <Route exact path="/create-company" component={Companies} />
               <WhatsAppsProvider>
                 <LoggedInLayout>
                   <Route exact path="/" component={Dashboard} isPrivate />

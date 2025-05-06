@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "100vw",
     height: "100vh",
-    background: "linear-gradient(to right, #008080 , #008080 , #008080)",
+    background: "linear-gradient(to right,rgb(226, 231, 231) , #008080 , #008080)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% 100%",
     backgroundPosition: "center",
@@ -41,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   paper: {
-    backgroundColor: theme.palette.login, //DARK MODE PLW DESIGN//
+    // backgroundColor: theme.palette.login, //DARK MODE PLW DESIGN//
+    backgroundColor: "#ffffff",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -79,12 +80,24 @@ const useStyles = makeStyles((theme) => ({
   powered: {
     color: "white",
   },
+  // input: {
+  //   "& .MuiOutlinedInput-root": {
+  //     position: "relative",
+  //     borderRadius: "30px",
+  //   },
+  // },
   input: {
     "& .MuiOutlinedInput-root": {
       position: "relative",
       borderRadius: "30px",
+      backgroundColor: theme.palette.mode === "dark" ? "#2b2b2b" : "#E8F0FE",
+      color: theme.palette.mode === "dark" ? "#fff" : "#000", // <- cor do texto
+      "& input": {
+        color: theme.palette.mode === "dark" ? "#fff" : "#000", // <- cor do texto digitado
+      },
     },
   },
+  
 }));
 
 const Login = () => {

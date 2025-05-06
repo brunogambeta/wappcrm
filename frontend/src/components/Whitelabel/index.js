@@ -7,7 +7,7 @@ import useSettings from "../../hooks/useSettings/index.js";
 import { toast } from 'react-toastify';
 import { makeStyles } from "@material-ui/core/styles";
 import { grey, blue } from "@material-ui/core/colors";
-import OnlyForSuperUser from "../OnlyForSuperUser";
+
 import useAuth from "../../hooks/useAuth.js/index.js";
 
 import {
