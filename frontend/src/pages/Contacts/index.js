@@ -373,6 +373,7 @@ const Contacts = () => {
             endIcon={<ArrowDropDownIcon />}
             variant="contained"
             color="primary"
+            style={{ color :  "white" }}
             // onClick={(e) => setConfirmOpen(true)}
             onClick={handleClick}
           >
@@ -403,6 +404,7 @@ const Contacts = () => {
           <Button
             variant="contained"
             color="primary"
+            style={{ color :  "white" }}
             onClick={handleOpenContactModal}
           >
             {i18n.t("contacts.buttons.add")}

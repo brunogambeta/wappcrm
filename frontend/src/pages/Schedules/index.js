@@ -279,6 +279,7 @@ const Schedules = () => {
             variant="contained"
             color="primary"
             onClick={handleOpenScheduleModal}
+            style={{ color : "white"}}
           >
             {i18n.t("schedules.buttons.add")}
           </Button>

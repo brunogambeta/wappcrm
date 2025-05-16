@@ -245,6 +245,7 @@ const ContactLists = () => {
                   fullWidth
                   variant="contained"
                   color="primary"
+                  style={{ color: "white" }}
                   onClick={handleOpenContactListModal}
                 >
                   {i18n.t("contactLists.buttons.add")}

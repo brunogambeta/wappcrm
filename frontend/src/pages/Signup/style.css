@@ -6,15 +6,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  /* overflow: hidden; */
-}
-
-.geral-signup {
-  display: flex;
-}
-.img-logo-signup {
-  width: 350px;
-  height: 100px;
 }
 
 .register {
@@ -22,13 +13,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.paper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 500px;
-  /* max-height: 100vh; */
 }
 
 .container-signup {
@@ -41,86 +25,183 @@ body {
   padding: 10px;
   /* max-height: 100vh; */
 }
-.h4 {
-  caret-color: #008080;
-  color: #008080;
-  column-rule-color: #008080;
-  font-size: 34px;
-  line-height: 41.99px;
-  margin: 10px 0 25px;
-}
-.span {
-  font-size: 16px;
-  line-height: 28px;
+
+.span{
+  margin-top: -115px;
+  font-weight: 500;
+  font-size: 20px;
+  justify-content: center;
+  
 }
 
-.container-img-signup {
+.geral {
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
 }
 
-.img-signup {
+.container-login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(235, 242, 255);
+  flex-direction: column;
+}
+
+.container-img {
+  align-items: space-around;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  flex-direction: column;
+  
+}
+.img-login {
+  width: 100%;
+  max-width: 462px;
+}
+.container-footer {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container-footer a, p {
+  color: black;
+  cursor: pointer;
+}
+.container-footer span {
+  max-width: 80px;
+  text-align: center;
+}
+
+.container-right {
   background-image: url(../../assets/bg-login.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  position: fixed;
-  width: 700px;
+  width: 100%;
   height: 100vh;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.p {
-  font-size: 12px;
-  color: #999;
+.box {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 6px -3px,
+    rgba(0, 0, 0, 0.14) 0px 10px 14px 1px, rgba(0, 0, 0, 0.12) 0px 4px 18px 3px;
+  display: flex;
+  flex-direction: column;
+  inline-size: 462px;
+  line-height: 20.02px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 500px;
+  padding-bottom: 8px;
+  margin: 0 10px;
 }
-.footer {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
+
+.container-header-box {
+  display: flex;
+  margin-top: -18px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
 }
-.footer a {
-  text-decoration: none;
+
+.label-text {
   cursor: pointer;
-  color: #3489ff;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 24.5px;
+  -webkit-text-fill-color: rgba(7, 7, 7, 0.87);
+  width: 100%;
 }
-.footer a:hover {
+.link-enter {
+  align-items: center;
+  background-color: #26A8AE;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+    rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  margin-left: -32px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  width: 100%;
+  border-radius: 30px;
+}
+.link-enter:hover {
+  background-color: #26A8AE;
+  text-decoration: none;
+}
+.link-enter > span {
+  cursor: pointer;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 24.5px;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+.container-footer-form > p {
+  inline-size: 382px;
+  margin-bottom: 0.35em;
+  text-align: center;
+}
+.termo {
+  text-decoration: none;
+  text-decoration-color: #26A8AE;
+  text-emphasis-color: #26A8AE;
+  -webkit-text-fill-color: #26A8AE;
+  -webkit-text-stroke-color: #26A8AE;
+}
+.termo:hover {
   text-decoration: underline;
 }
-
-@media screen and (max-width: 320px) {
-  .container-img-signup {
+.politica {
+  text-decoration: none;
+  text-decoration-color: #26A8AE;
+  text-emphasis-color: #26A8AE;
+  -webkit-text-fill-color: #26A8AE;
+  -webkit-text-stroke-color: #26A8AE;
+}
+.politica:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+  .geral {
+    flex-direction: column;
+  }
+  .container {
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-footer {
     display: none;
   }
-  .paper {
-    width: 300px;
-  }
-  .img-logo-signup {
-    width: 200px;
-    height: 70px;
+  .container-login {
+    max-height: 300px;
   }
 }
-@media screen and (max-width: 940px) {
-  .container-img-signup {
-    display: none;
+@media screen and (max-width: 375px) {
+  .box {
+    margin: 0 10px;
+    width: 90%;
   }
-}
-
-@media screen and (max-width: 1024px) {
-  .paper {
-    max-width: 450px;
-    max-height: fit-content;
-  }
-  .img-signup {
-    width: 499px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .img-signup {
-    width: 50%;
+  .container-footer-form {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

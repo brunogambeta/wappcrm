@@ -294,6 +294,7 @@ const Campaigns = () => {
                   variant="contained"
                   onClick={handleOpenCampaignModal}
                   color="primary"
+                  style={{color: "white"}}
                 >
                   {i18n.t("campaigns.buttons.add")}
                 </Button>

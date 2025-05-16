@@ -243,6 +243,26 @@ export const report = async (req: Request, res: Response): Promise<Response> => 
   return res.status(200).json({ tickets, totalTickets });
 };
 
+export const count = async (req: Request, res: Response): Promise<Response> => {
+  const { companyId } = req.user;
+
+  const { count } = await Ticket.findAndCountAll({
+    where: { companyId: companyId, isGroup: false, status: "pending" },
+  });
+
+  return res.status(200).json({ count });
+};
+
+export const countGroup = async (req: Request, res: Response): Promise<Response> => {
+  const { companyId } = req.user;
+
+  const { count } = await Ticket.findAndCountAll({
+    where: { companyId: companyId, isGroup: true, status: "pending" },
+  });
+
+  return res.status(200).json({ count });
+};
+
 export const show = async (req: Request, res: Response): Promise<Response> => {
   const { ticketId } = req.params;
   const { companyId } = req.user;
@@ -340,3 +360,4 @@ export const closeAll = async (req: Request, res: Response): Promise<Response> =
 
   return res.status(200).json();
 };
+

@@ -72,15 +72,16 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
-    color: theme.palette.dark.main,
-    background: theme.palette.barraSuperior,
+    // color: theme.palette.dark.main,
+    // background: theme.palette.barraSuperior,
   },
   toolbarIcon: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "flex-end",
-    padding: "0 8px",
-    minHeight: "48px",
+    justifyContent: "center",
+    scale: "2.5",
+    marginLeft: "70px",
+    marginTop: "2px",
     [theme.breakpoints.down("sm")]: {
       height: "48px"
     }
@@ -131,6 +132,8 @@ const useStyles = makeStyles((theme) => ({
   },
   iconDrawer: {
     color: theme.palette.drawerIcons,
+    marginRight: "10",
+    scale: "0.5",
   },
   drawerPaperClose: {
     overflowX: "hidden",
@@ -391,7 +394,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
         open={drawerOpen}
       >
         <div className={classes.toolbarIcon}>
-          { <img src={logo} className={classes.logo} alt="logo"/> }
+          {<img src={logo} className={classes.logo} alt="logo" />}
           <IconButton className={classes.iconDrawer} onClick={() => setDrawerOpen(!drawerOpen)}>
             <ChevronLeftIcon />
           </IconButton>
@@ -439,82 +442,35 @@ const LoggedInLayout = ({ children, themeToggle }) => {
           </Typography>
 
 
-          {/* { <Typography variant="caption" style={{ color: "white", marginRight: 15, fontWeight: "bold" }}>Sua assinatura: {companyDueDate}</Typography>} */}
+          {/* { <Typography variant="caption" style={{ color: "white", marginRight: 15, fontWeight: "bold" }}>Data de vencimento: {companyDueDate}</Typography>}  */}
 
-          <Tooltip arrow title={<Typography variant="caption" style={{ color: "white", marginRight: 15, fontWeight: "bold" }}>Sua assinatura: {companyDueDate}</Typography>}>
+          <Tooltip arrow title={<Typography variant="caption" style={{ color: "white", marginRight: 15, fontWeight: "bold" }}>Sua assinatura vencerá em: {companyDueDate}</Typography>}>
             <EventAvailableIcon style={{ color: "white", marginRight: 15, }} />
           </Tooltip>
 
 
-          { <IconButton edge="start" onClick={toggleColorMode}>
+          {<IconButton edge="start" onClick={toggleColorMode}>
             {theme.mode === 'dark' ? <Brightness7Icon style={{ color: "white" }} /> : <Brightness4Icon style={{ color: "white" }} />}
-          </IconButton> }
+          </IconButton>}
 
-          { <NotificationsVolume
+          {<NotificationsVolume
             setVolume={setVolume}
             volume={volume}
-          /> }
+          />}
 
-          { <IconButton
+          {<IconButton
             onClick={handleRefreshPage}
             aria-label={i18n.t("mainDrawer.appBar.refresh")}
             color="inherit"
           >
             <CachedIcon style={{ color: "white" }} />
-          </IconButton> }
+          </IconButton>}
 
           {user.id && <NotificationsPopOver volume={volume} />}
 
           <AnnouncementsPopover />
 
           <ChatPopover />
-
-          {/* <div>
-            <IconButton
-              aria-label="current language"
-              aria-controls="menu-language"
-              aria-haspopup="true"
-              onClick={handleLanguageMenu}
-              variant="contained"
-              style={{ color: "white" }}
-            >
-              <LanguageIcon key={currentLanguage} />
-            </IconButton>
-
-            <IconButton 
-              edge="start" 
-              aria-label="WhatsApp-Contact"
-              aria-haspopup="true"
-              variant="contained"
-              onClick={() => openInNewTab(`https://wa.me/${process.env.REACT_APP_NUMBER_SUPPORT}`)}
-            >
-              <WhatsApp style={{ color: "white" }} />
-            </IconButton> 
-
-            <Menu
-              id="language-appbar"
-              anchorEl={anchorEl}
-              getContentAnchorEl={null}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "right",
-              }}
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={languageOpen}
-              onClose={handleCloseLanguageMenu}
-            >
-              {
-                Object.keys(messages).map((m) => (
-                  <MenuItem key={m} onClick={() => handleChooseLanguage(m)}>
-                    {messages[m].translations.mainDrawer.appBar.i18n.language}
-                  </MenuItem>
-                ))
-              }
-            </Menu>
-          </div> */}
 
           <div>
             <IconButton
@@ -527,7 +483,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
             >
               <AccountCircle />
             </IconButton>
-            <Typography variant="caption" style={{ color: "white", marginRight: 10, fontWeight: "bold" }}>{user.name}</Typography>
+            {/* <Typography variant="caption" style={{ color: "white", marginRight: 10, fontWeight: "bold" }}>{user.name}</Typography> */}
             <Menu
               id="menu-appbar"
               anchorEl={anchorEl}
@@ -543,9 +499,10 @@ const LoggedInLayout = ({ children, themeToggle }) => {
               open={menuOpen}
               onClose={handleCloseProfileMenu}
             >
-              <MenuItem onClick={handleOpenUserModal}>{i18n.t("mainDrawer.appBar.user.profile")} </MenuItem>
+              <MenuItem onClick={handleOpenUserModal}>Usuário: {user.name}</MenuItem> 
+              {/* <MenuItem onClick={handleOpenUserModal}>{i18n.t("mainDrawer.appBar.user.profile")} </MenuItem> */}
               {/* <MenuItem onClick={toggleColorMode}> {theme.mode === 'dark' ? i18n.t("mainDrawer.appBar.styleLight") : i18n.t("mainDrawer.appBar.styleDark")}  </MenuItem> */}
-              <NestedMenuItem
+              {/* <NestedMenuItem
                 label={i18n.t("mainDrawer.appBar.user.language")}
                 parentMenuOpen={menuOpen}
               >
@@ -556,7 +513,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
                     </MenuItem>
                   ))
                 }
-              </NestedMenuItem>
+              </NestedMenuItem> */}
               {/* <MenuItem > {i18n.t("mainDrawer.appBar.language")} </MenuItem> */}
               <MenuItem onClick={handleClickLogout}> {i18n.t("mainDrawer.appBar.user.logout")} </MenuItem>
             </Menu>

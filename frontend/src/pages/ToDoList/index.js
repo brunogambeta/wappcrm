@@ -102,7 +102,7 @@ const ToDoList = () => {
           onChange={handleTaskChange}
           variant="outlined"
         />
-        <Button variant="contained" color="primary" onClick={handleAddTask}>
+        <Button variant="contained" color="primary"  style={{color: "white"}} onClick={handleAddTask}>
           {editIndex >= 0 ? 'Salvar' : 'Adicionar'}
         </Button>
       </div>

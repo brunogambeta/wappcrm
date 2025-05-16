@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "100vw",
     height: "100vh",
-    background: "linear-gradient(to right,rgb(226, 231, 231) , #008080 , #008080)",
+    background: "linear-gradient(to right,rgb(226, 231, 231) , #26A8AE , #26A8AE)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% 100%",
     backgroundPosition: "center",
@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     "&.MuiButton-root": {
       margin: "20px 0px 16px",
-      backgroundColor: "#008080",
+      backgroundColor: "#26A8AE",
       borderRadius: " 30px",
     },
     "&:hover": {
@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
       // boxShadow: "none",
     },
 
-    backgroundColor: "#008080",
+    backgroundColor: "#26A8AE",
     margin: theme.spacing(3, 0, 2),
     WebkitTextFillColor: "#FFF",
     width: "50%",

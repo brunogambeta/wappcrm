@@ -49,7 +49,7 @@ const App = () => {
 
             setPrimaryColorLight: (color) => {
                 if (!color || !color.startsWith("#")) {
-                    color = "#008080";
+                    color = "#26A8AE";
                 }
                 setPrimaryColorLight(color);
             },
@@ -100,7 +100,7 @@ const App = () => {
                 },
                 "&::-webkit-scrollbar-thumb": {
                     boxShadow: 'inset 0 0 6px rgba(0, 0, 0, 0.3)',
-                    backgroundColor: "#008080",
+                    backgroundColor: "#26A8AE",
                 },
             },
             scrollbarStylesSoft: {
@@ -108,7 +108,7 @@ const App = () => {
                     width: "8px",
                 },
                 "&::-webkit-scrollbar-thumb": {
-                    backgroundColor: mode === "light" ? "#008080" : "#333333",
+                    backgroundColor: mode === "light" ? "#26A8AE" : "#333333",
                 },
 
             },
@@ -118,23 +118,24 @@ const App = () => {
                     borderRadius: "8px",
                 },
                 "&::-webkit-scrollbar-thumb": {
-                    backgroundColor: mode === "light" ? "#008080" : "#fff !important",
+                    backgroundColor: mode === "light" ? "#26A8AE" : "#fff !important",
                     borderRadius: "8px",
                 },
             },
 
             //#008080 - Cor clTeal
+            //#26A8AE - Nova Cor Correta
               palette: {
                  type: mode,
-                 primary: { main: "#008080" },
-                 textPrimary: mode === "light" ? "#008080" : "#FFFFFF",
-                 borderPrimary: mode === "light" ? "#008080" : "#FFFFFF",
+                 primary: { main: "#26A8AE" },
+                 textPrimary: mode === "light" ? "#26A8AE" : "#FFFFFF",
+                 borderPrimary: mode === "light" ? "#26A8AE" : "#FFFFFF",
                  dark: { main: mode === "light" ? "#333333" : "#F3F3F3" },
                  light: { main: mode === "light" ? "#F3F3F3" : "#333333" },
                  tabHeaderBackground: mode === "light" ? "#EEE" : "#333",
                  optionsBackground: mode === "light" ? "#fafafa" : "#333",
                  options: mode === "light" ? "#fafafa" : "#666",
-                 fontecor: mode === "light" ? "#008080" : "#fff",
+                 fontecor: mode === "light" ? "#26A8AE" : "#fff",
                  fancyBackground: mode === "light" ? "#fafafa" : "#333",
                  bordabox: mode === "light" ? "#eee" : "#333",
                  newmessagebox: mode === "light" ? "#eee" : "#333",
@@ -148,15 +149,16 @@ const App = () => {
                  boxchatlist: mode === "light" ? "#ededed" : "#333",
                  total: mode === "light" ? "#fff" : "#222",
                  messageIcons: mode === "light" ? "grey" : "#F3F3F3",
-                 inputBackground: mode === "light" ? "#008080" : "#333",
-                //  barraSuperior: mode === "light" ? "linear-gradient(to right, #fff, #008080, #008080)" : "#008080",
-                    barraSuperior: "linear-gradient(to right, #fff, #008080, #008080)",
+                 inputBackground: mode === "light" ? "#26A8AE" : "#333",
+                //  barraSuperior: mode === "light" ? "linear-gradient(to right, #fff, #26A8AE, #26A8AE)" : "#26A8AE",
+                 barraSuperior: "linear-gradient(to right, #fff, #26A8AE, #26A8AE)",
                  boxticket: mode === "light" ? "#EEE" : "#333",
-                 campaigntab: mode === "light" ? "#008080" : "#333",
-                 drawerIcons: mode === "light" ? "#008080" : "inherit",
+                 campaigntab: mode === "light" ? "#26A8AE" : "#333",
+                 drawerIcons: mode === "light" ? "#26A8AE" : "inherit",
                  drawerBackground: mode === "light" ? "#fff" : "#333",
-                 drawerText: mode === "light" ? "#008080" : "#fff",
-
+                 drawerText: mode === "light" ? "#26A8AE" : "#fff",
+                 corTexto: mode === "light" ? "#26A8AE" : "#fff",
+                 
                  // background: '#10175b',
                  // color: 'white',
 

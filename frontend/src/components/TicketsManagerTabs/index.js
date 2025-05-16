@@ -28,6 +28,7 @@ import { UsersFilter } from "../UsersFilter";
 import api from "../../services/api";
 import { TicketsListGroup } from "../TicketsListGroup";
 import GroupIcon from "@material-ui/icons/Group";
+import { set } from "date-fns";
 
 const useStyles = makeStyles(theme => ({
   ticketsWrapper: {
@@ -42,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   tabsHeader: {
-    
+
     flex: "none",
     backgroundColor: theme.palette.tabHeaderBackground,
   },
@@ -199,6 +200,8 @@ const TicketsManagerTabs = () => {
 
   const [openCount, setOpenCount] = useState(0);
   const [pendingCount, setPendingCount] = useState(0);
+  const [pendingTotalGroupCount, setPendingTotalGroupCount] = useState(0);
+  const [pendingTotalCount, setPendingTotalCount] = useState(0);
 
   const userQueueIds = user.queues.map((q) => q.id);
   const [selectedQueueIds, setSelectedQueueIds] = useState(userQueueIds || []);
@@ -214,6 +217,16 @@ const TicketsManagerTabs = () => {
       setShowAllTickets(true);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    handleAllGroupTickets();
+    handleAllTickets();
+
+    const intervalId = setInterval(() => {
+      handleAllGroupTickets();
+      handleAllTickets();
+    }, 5000); // 5 segundos
+  
+    return () => clearInterval(intervalId); // Limpa o intervalo ao desmontar o componente
   }, []);
 
   useEffect(() => {
@@ -227,12 +240,14 @@ const TicketsManagerTabs = () => {
   const fetchSettings = async () => {
     try {
       const { data } = await api.get("/settings");
+      console.log("Settings", data);
       const showGroups = data.find((s) => s.key === "CheckMsgIsGroup");
       setShowTabGroup(showGroups.value === "disabled");
     } catch (err) {
       // toastError(err);
     }
   };
+
 
   const handleSearch = (e) => {
     const searchedTerm = e.target.value.toLowerCase();
@@ -247,6 +262,8 @@ const TicketsManagerTabs = () => {
 
     searchTimeout = setTimeout(() => {
       setSearchParam(searchedTerm);
+      handleAllGroupTickets();
+      handleAllTickets();
     }, 500);
   };
 
@@ -271,14 +288,34 @@ const TicketsManagerTabs = () => {
     }
   };
 
-  const handleSelectedTags = (selecteds) => {
-    const tags = selecteds.map((t) => t.id);
+const handleSelectedTags = (selecteds) => {
+  const tags = selecteds.map((t) => t.id);
     setSelectedTags(tags);
   };
 
   const handleSelectedUsers = (selecteds) => {
     const users = selecteds.map((t) => t.id);
     setSelectedUsers(users);
+  };
+
+  const handleAllGroupTickets = async () => {
+    try {
+      const { data } = await api.get("/tickets/countGroup");
+      setPendingTotalGroupCount(data.count);
+      console.log("Total de tickets do grupo: ", data.count);
+    } catch (error) {
+      console.log("Erro na busca dos Grupos: ", error);
+    }
+  };
+
+  const handleAllTickets = async () => {
+    try {
+      const { data } = await api.get("/tickets/count");
+      setPendingTotalCount(data.count);
+      console.log("Total de tickets: ", data.count);
+    } catch (error) {
+      console.log("Erro na busca dos Grupos: ", error);
+    }
   };
 
   const CloseAllTicket = async () => {
@@ -289,6 +326,7 @@ const TicketsManagerTabs = () => {
       });
 
       handleSnackbarClose();
+
 
     } catch (err) {
       console.log("Error: ", err);
@@ -324,8 +362,13 @@ const TicketsManagerTabs = () => {
           <Tab
             value={"open"}
             icon={<MoveToInboxIcon />}
-            
-            label={i18n.t("tickets.tabs.open.title")}
+            label=<Badge
+            className={classes.badge}
+            badgeContent={pendingTotalCount}
+            color="secondary"
+          >
+            {i18n.t("tickets.tabs.open.title")}
+          </Badge>
             classes={{ root: classes.tab }}
           />
 
@@ -333,7 +376,15 @@ const TicketsManagerTabs = () => {
             <Tab
               value={"group"}
               icon={<GroupIcon />}
-              label={i18n.t("tickets.tabs.group.title")}
+              label={
+                  <Badge
+                  className={classes.badge}
+                  badgeContent={pendingTotalGroupCount}
+                  color="secondary"
+                >
+                  {i18n.t("tickets.tabs.group.title")}
+                </Badge>
+              }
               classes={{ root: classes.tab }}
             />
           )}
@@ -459,7 +510,7 @@ const TicketsManagerTabs = () => {
                 className={classes.badge}
                 badgeContent={openCount}
                 color="primary"
-              >
+            >
                 {i18n.t("ticketsList.assignedHeader")}
               </Badge>
             }

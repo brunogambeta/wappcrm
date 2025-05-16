@@ -402,6 +402,7 @@ const Reports = () => {
                 color="primary"
                 onClick={() => handleFilter(pageNumber)}
                 size="small"
+                style={{color: "white"}}
               >{i18n.t("reports.buttons.filter")}</Button>
             </Grid>
           </Grid>

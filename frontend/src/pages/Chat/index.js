@@ -140,7 +140,7 @@ export function ChatModal({
         <Button onClick={handleClose} color="primary">
           Fechar
         </Button>
-        <Button onClick={handleSave} color="primary" variant="contained">
+        <Button onClick={handleSave} style={{ color :  "white" }} color="primary" variant="contained">
           Salvar
         </Button>
       </DialogActions>
@@ -342,10 +342,11 @@ function Chat(props) {
                 setDialogType("new");
                 setShowDialog(true);
               }}
+              style={{ color :  "white" }}
               color="primary"
               variant="contained"
             >
-              Nova
+              Novo
             </Button>
           </div>
 
@@ -386,7 +387,7 @@ function Chat(props) {
           <Tabs
             value={tab}
             indicatorColor="primary"
-            textColor="primary"
+            textColor="white"
             onChange={(e, v) => setTab(v)}
             aria-label="disabled tabs example"
           >

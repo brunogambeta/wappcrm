@@ -252,6 +252,7 @@ const Quickemessages = () => {
                   variant="contained"
                   onClick={handleOpenQuickMessageDialog}
                   color="primary"
+                  style={{ color : "white" }}
                 >
                   {i18n.t("quickMessages.buttons.add")}
                 </Button>

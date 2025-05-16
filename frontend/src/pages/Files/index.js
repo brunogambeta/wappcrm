@@ -234,6 +234,7 @@ const FileLists = () => {
                     <Button
                         variant="contained"
                         color="primary"
+                        style={{color:"white"}}
                         onClick={handleOpenFileListModal}
                     >
                         {i18n.t("files.buttons.add")}

@@ -454,6 +454,7 @@ const Connections = () => {
 							<Button
 								variant="contained"
 								color="primary"
+								style={{color:"white"}}
 								onClick={handleOpenWhatsAppModal}
 							>
 								{i18n.t("connections.buttons.add")}
@@ -464,6 +465,7 @@ const Connections = () => {
 					<Button
 						variant="contained"
 						color="primary"
+						style={{color:"white"}}
 						onClick={() => openInNewTab(`https://wa.me/${process.env.REACT_APP_NUMBER_SUPPORT}`)}
 						
 					>

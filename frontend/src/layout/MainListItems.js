@@ -595,7 +595,13 @@ const MainListItems = (props) => {
       </li>
       <Divider />
       {/**versão do software */}
-      <Typography variant="caption" align="center" style={{ marginTop: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}> Versão 7.0.0</Typography>
+      <Typography
+        variant="caption"
+        align="center"
+        style={{ marginTop: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+      >
+        V: {process.env.REACT_APP_VERSAO}
+      </Typography>
     </div>
   );
 };

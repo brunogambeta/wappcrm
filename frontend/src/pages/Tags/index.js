@@ -236,8 +236,8 @@ const Tags = () => {
             variant="contained"
             color="primary"
             onClick={handleOpenTagModal}
-          >
-            {i18n.t("tags.buttons.add")}
+            style={{ color : "white" }}>
+            {i18n.t("tags.buttons.add")}            
           </Button>
         </MainHeaderButtonsWrapper>
       </MainHeader>

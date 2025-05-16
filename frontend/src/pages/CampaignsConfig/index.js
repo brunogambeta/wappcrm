@@ -236,6 +236,7 @@ const CampaignsConfig = () => {
                 onClick={saveSettings}
                 color="primary"
                 variant="contained"
+                style={{ color: "white" }}
               >
                 Salvar Configurações
               </Button>

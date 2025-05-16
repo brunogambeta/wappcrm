@@ -148,6 +148,7 @@ const MessagesAPI = () => {
                 <Button
 									type="submit"
 									color="primary"
+                  style={{color:"white"}}
 									variant="contained"
 									className={classes.btnWrapper}
 								>
@@ -218,6 +219,7 @@ const MessagesAPI = () => {
               <Grid item xs={12} className={classes.textRight}>
                 <Button
 									type="submit"
+                  style={{color:"white"}}
 									color="primary"
 									variant="contained"
 									className={classes.btnWrapper}
@@ -277,7 +279,7 @@ const MessagesAPI = () => {
       <Grid container>
         <Grid item xs={12} sm={6}>
           <Typography className={classes.elementMargin} component="div">
-            <p>Seguem abaixo a lista de informações necessárias para envio das mensagens de texto:</p>
+            <b>Seguem abaixo a lista de informações necessárias para envio das mensagens de texto: <br/></b>
             <b>Endpoint: </b> {getEndpoint()} <br />
             <b>Método: </b> POST <br />
             <b>Headers: </b> Authorization Bearer (token cadastrado) e Content-Type (application/json) <br />
@@ -285,7 +287,7 @@ const MessagesAPI = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography className={classes.elementMargin}>
+          <Typography className={classes.elementMargin} component="div">
             <b>Teste de Envio</b>
           </Typography>
           {renderFormMessageText()}
@@ -297,7 +299,7 @@ const MessagesAPI = () => {
       <Grid container>
         <Grid item xs={12} sm={6}>
           <Typography className={classes.elementMargin} component="div">
-            <p>Seguem abaixo a lista de informações necessárias para envio das mensagens de texto:</p>
+            <b>Seguem abaixo a lista de informações necessárias para envio das mensagens de texto:<br/></b>
             <b>Endpoint: </b> {getEndpoint()} <br />
             <b>Método: </b> POST <br />
             <b>Headers: </b> Authorization Bearer (token cadastrado) e Content-Type (multipart/form-data) <br />
@@ -313,7 +315,7 @@ const MessagesAPI = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography className={classes.elementMargin}>
+          <Typography className={classes.elementMargin} component="div">
             <b>Teste de Envio</b>
           </Typography>
           {renderFormMessageMedia()}

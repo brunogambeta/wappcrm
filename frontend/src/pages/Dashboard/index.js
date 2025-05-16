@@ -282,6 +282,7 @@ const Dashboard = () => {
               onClick={() => fetchData()}
               variant="contained"
               color="primary"
+              style={{ color: "white" }}
             >
               Filtrar
             </ButtonWithSpinner>

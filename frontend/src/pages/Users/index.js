@@ -263,6 +263,7 @@ const Users = () => {
           <Button
             variant="contained"
             color="primary"
+            style={{color:"white"}}
             onClick={handleOpenUserModal}
           >
             {i18n.t("users.buttons.add")}

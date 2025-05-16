@@ -62,9 +62,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px 10px 5px",
     margin: "10px",
     position: "relative",
-    backgroundColor: "blue",
+    backgroundColor: "#26A8AE",
     maxWidth: 300,
     borderRadius: 10,
+    color: "#fff",
     borderBottomLeftRadius: 0,
     border: "1px solid rgba(0, 0, 0, 0.12)",
   },
@@ -76,6 +77,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "right",
     maxWidth: 300,
     borderRadius: 10,
+    color: "#fff",
     borderBottomRightRadius: 0,
     border: "1px solid rgba(0, 0, 0, 0.12)",
   },
@@ -347,7 +349,7 @@ export default function ChatMessages({
               return (
                 <Box key={key} className={classes.boxLeft}>
                   <Typography variant="subtitle2">
-                    {item.sender.name}
+                    {item.sender.name}                    
                   </Typography>
                   {item.mediaPath && checkMessageMedia(item)}
                   {item.message}
